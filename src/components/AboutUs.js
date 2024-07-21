@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import app_image from '../img/react-default-landing-page.png'
 import point from '../img/point.gif'
 export default function AboutUs() {
-  const [buttonText, setButtonText] = useState('<i className="fa-solid fa-clipboard"></i>');
+  const [buttonText, setButtonText] = useState('<i class="fa-solid fa-clipboard"></i>');
   const codeRef = useRef();
 
   const copyToClipboard = () => {
@@ -10,7 +10,7 @@ export default function AboutUs() {
       .then(() => {
         setButtonText('Copied to Clipboard!');
         setTimeout(() => {
-          setButtonText('<i className="fa-solid fa-clipboard"></i>');
+          setButtonText('<i class="fa-solid fa-clipboard"></i>');
         }, 2000); // Reset button text after 2 seconds
       })
       .catch((err) => {

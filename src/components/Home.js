@@ -84,7 +84,7 @@ export default function Home() {
                 to="bootstrap-overview"
                 smooth={true}
                 duration={100}
-                offset={-100} // Adjust for fixed navbar height
+                offset={-120} // Adjust for fixed navbar height
               >
                 Bootstrap Overview
               </ScrollLink>
@@ -143,7 +143,7 @@ export default function Home() {
       </div>
       <div className='main-content'>
         {/* Overview */}
-        <div id="bootstrap-overview" className='container mx-2 mt-2'>
+        <div id="bootstrap-overview" className='container mx-2 mt-5'>
           <h2 className='mx-3'>
             Bootstrap 5 Get Started -- Overview
           </h2>
