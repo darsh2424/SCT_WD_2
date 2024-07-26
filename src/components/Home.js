@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import logo from '../img/bootstrap-logo.png'
 import nav_out_img from '../img/navOut.png'
-export default function Home() {
+
+const Home = ({ toggleToDo }) => {
   const displayNav = () => {
     document.getElementById('home-nav').style.display = "block";
     document.getElementById('homeNavBtn').style = "display:none";
@@ -10,9 +11,9 @@ export default function Home() {
   }
   const closeNav = () => {
     if (window.innerWidth <= 720) {
-    document.getElementById('home-nav').style.display = "none";
-    document.getElementById('homeNavBtn').style = "display:block";
-    document.getElementById('close-nav').style.display = "none";
+      document.getElementById('home-nav').style.display = "none";
+      document.getElementById('homeNavBtn').style = "display:block";
+      document.getElementById('close-nav').style.display = "none";
     }
   }
   const [buttonText, setButtonText] = useState('<i class="fa-solid fa-clipboard"></i>');
@@ -368,7 +369,7 @@ export default function Home() {
 
         {/* Forms */}
         <hr />
-        <div id="forms" className='container mx-2 mt-2' style={{height:680}}>
+        <div id="forms" className='container mx-2 mt-2' style={{ height: 680 }}>
           <h3>Forms</h3>
           <p className='p-3'>
             Some Snippet Here..
@@ -378,4 +379,8 @@ export default function Home() {
     </div >
 
   )
-}
+};
+
+export default Home;
+
+

@@ -1,60 +1,115 @@
-.content-container{
+.content-container {
     margin-top: 100px;
 }
+
 /* navbar css */
-.main{
+.main {
     overflow: hidden;
 }
-.layout .nav-item{
-    padding:20px;
+
+.layout .nav-item {
+    padding: 20px;
     font-size: 1.2rem;
 }
-.layout .nav-item:hover{
+
+.layout .nav-item:hover {
     opacity: 0.5;
 }
-.layout .dropdown:hover{
+
+.layout .dropdown:hover {
     opacity: 1;
 }
-.social-icon .nav-item{
+
+.social-icon .nav-item {
     padding: 0;
 }
 
 /* Home Page Css */
-.home-nav{
+.home-nav {
     height: 100vh;
     position: fixed;
     max-width: fit-content;
     font-size: 1rem;
-    background-color: rgb(220,255,245);
+    background-color: rgb(220, 255, 245);
     z-index: 999;
 }
-.main-content{
+
+.main-content {
     margin-left: 200px;
 }
-.home-nav .nav-item{
-    padding:20px;    
+
+.home-nav .nav-item {
+    padding: 20px;
 }
-#close-nav,.header{
+
+#close-nav,
+.header {
     display: none;
 }
+
+/* App.css */
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.form-modal-content {
+    background-color: white;
+    padding: 20px;
+    min-width: 50%;
+    min-height: 65%;
+    border-radius: 15px;
+    position: relative;
+}
+
+.blur {
+    filter: blur(6px);
+    background-color: rgb(220, 255, 245);
+}
+
+.form-modal-content .table-responsive {
+    max-height: 300px; /* Set a max-height for the table */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
 @media screen and (max-width: 720px) {
-    .content-container{
+    .content-container {
         margin-top: 100px;
     }
-    .home-nav{
+
+    .home-nav {
         display: none;
     }
-    #close-nav,.header{
+
+    #close-nav,
+    .header {
         display: block;
     }
-    .main-content{
+
+    .main-content {
         margin-left: 0px;
         margin-top: 50px;
     }
-    .header{
+
+    .header {
         position: fixed;
-        width:100vh;
-        height:50px;
+        width: 100vh;
+        height: 50px;
         background-color: white;
     }
+
+    .form-modal-content {
+        min-width: 90%;
+        min-height: 50%;
+        margin-top: 50px;
+    }
+
 }
