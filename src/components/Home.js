@@ -3,7 +3,7 @@ import { Link as ScrollLink } from 'react-scroll'
 import logo from '../img/bootstrap-logo.png'
 import nav_out_img from '../img/navOut.png'
 
-const Home = ({ toggleToDo }) => {
+const Home = ({ toggleGame }) => {
   const displayNav = () => {
     document.getElementById('home-nav').style.display = "block";
     document.getElementById('homeNavBtn').style = "display:none";
@@ -143,6 +143,8 @@ const Home = ({ toggleToDo }) => {
         </button>
       </div>
       <div className='main-content'>
+        {/* Tic-Tac-Toe Game */}
+          <button id='game-btn' className='btn btn-outline-success' onClick={toggleGame}><i className="fa-solid fa-gamepad"></i></button>
         {/* Overview */}
         <div id="bootstrap-overview" className='container mx-2 mt-5'>
           <h2 className='mx-3'>

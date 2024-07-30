@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../img/site-logo.png';
 import { Outlet, Link } from "react-router-dom";
 
-const Navbar = ({ toggleToDo }) => {
+const Navbar = ({ toggleToDo,toggleGame }) => {
     return (
         <>
             <nav className="layout navbar navbar-expand-lg bg-primary-subtle fixed-top">
@@ -26,8 +26,8 @@ const Navbar = ({ toggleToDo }) => {
                                     Tasks
                                 </Link>
                                 <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/">StopWatch</Link></li>
-                                    <li><Link className="dropdown-item" to="/">Tic-Tac-Toe</Link></li>
+                                    <li><button className='dropdown-item'>StopWatch</button></li>
+                                    <li><Link className="dropdown-item" onClick={toggleGame}>Tic-Tac-Toe</Link></li>
                                     <li><button className='dropdown-item' onClick={toggleToDo}>To-Do List</button></li>
                                 </ul>
                             </li>
@@ -66,8 +66,8 @@ const Navbar = ({ toggleToDo }) => {
                                         <li><Link className="dropdown-item" to="/about">About</Link></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <Link className="nav-link mx-3 disabled" aria-disabled="true">Tasks</Link>
-                                        <li><Link className="dropdown-item" to="/">StopWatch</Link></li>
-                                        <li><Link className="dropdown-item" to="/">Tic-Tac-Toe</Link></li>
+                                        <li><button className='dropdown-item'>StopWatch</button></li>
+                                        <li><Link className="dropdown-item" onClick={toggleGame}>Tic-Tac-Toe</Link></li>
                                         <li><button className='dropdown-item' onClick={toggleToDo}>To-Do List</button></li>
                                     </ul>
                                 </li>
