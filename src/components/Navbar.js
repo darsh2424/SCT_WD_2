@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../img/site-logo.png';
 import { Outlet, Link } from "react-router-dom";
 
-const Navbar = ({ toggleToDo,toggleGame }) => {
+const Navbar = ({ toggleToDo,toggleStopWatch,toggleGame }) => {
     return (
         <>
             <nav className="layout navbar navbar-expand-lg bg-primary-subtle fixed-top">
@@ -26,7 +26,7 @@ const Navbar = ({ toggleToDo,toggleGame }) => {
                                     Tasks
                                 </Link>
                                 <ul className="dropdown-menu">
-                                    <li><button className='dropdown-item'>StopWatch</button></li>
+                                    <li><button className='dropdown-item' onClick={toggleStopWatch}>StopWatch</button></li>
                                     <li><Link className="dropdown-item" onClick={toggleGame}>Tic-Tac-Toe</Link></li>
                                     <li><button className='dropdown-item' onClick={toggleToDo}>To-Do List</button></li>
                                 </ul>
@@ -66,7 +66,7 @@ const Navbar = ({ toggleToDo,toggleGame }) => {
                                         <li><Link className="dropdown-item" to="/about">About</Link></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <Link className="nav-link mx-3 disabled" aria-disabled="true">Tasks</Link>
-                                        <li><button className='dropdown-item'>StopWatch</button></li>
+                                        <li><button className='dropdown-item' onClick={toggleStopWatch}>StopWatch</button></li>
                                         <li><Link className="dropdown-item" onClick={toggleGame}>Tic-Tac-Toe</Link></li>
                                         <li><button className='dropdown-item' onClick={toggleToDo}>To-Do List</button></li>
                                     </ul>
