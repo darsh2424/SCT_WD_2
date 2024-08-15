@@ -53,7 +53,7 @@ const Navbar = ({ toggleToDo,toggleStopWatch,toggleGame }) => {
 
                         {/* Dropdown and social media icons for smaller screens */}
                         <div className="small-screen d-flex d-lg-none w-100">
-                            <Link className="mt-4" to="/">
+                            <Link className="mt-4 mx-2" to="/">
                                 <img src={logo} width="25" alt="site-logo" />
                             </Link>
                             <ul className="navbar-nav me-auto mb-lg-0">

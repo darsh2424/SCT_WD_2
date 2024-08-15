@@ -6,7 +6,7 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import './components/main.css';
 import ToDo from './components/ToDo';
-import StopWatch from './StopWatch';
+import StopWatch from './components/StopWatch';
 import TicTacToe from './components/TicTacToe';
 const Index = () => {
   const [showToDo, setShowToDo] = useState(false);

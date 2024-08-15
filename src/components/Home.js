@@ -69,7 +69,6 @@ const Home = ({ toggleGame }) => {
   }, []);
 
   return (
-
     <div className='main container-fluid'>
       <div className='home-nav' id='home-nav'>
         <div className="navbar nav-underline flex-column" id="homeNav">
